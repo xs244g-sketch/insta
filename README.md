@@ -1,6 +1,6 @@
 # Kaydo Insta Tool
 
-أداة متقدمة مخصصة لبيئة Kali Linux، تم تطويرها لأغراض تعليمية واختبار الاختراق الأخلاقي.
+أداة متقدمة مخصصة لبيئة Kali Linux، مكتوبة بلغة Bash، وتم تطويرها لأغراض تعليمية واختبار الاختراق الأخلاقي.
 
 ## ⚡ المميزات
 - واجهة أوامر (CLI) سريعة وخفيفة.
@@ -11,15 +11,15 @@
 ## 🛠️ المتطلبات
 قبل تشغيل الأداة، تأكد من تثبيت المتطلبات التالية:
 - نظام Kali Linux (أو أي توزيعة Linux).
-- Python 3.
 - خدمة TOR.
+- أدوات مساعدة: `curl` و `openssl`.
 
 ## 🚀 التثبيت
 افتح الطرفية (Terminal) وانسخ الأوامر التالية:
 
-# تحديث النظام وتثبيت TOR
+# تحديث النظام وتثبيت المتطلبات
 sudo apt update
-sudo apt install tor -y
+sudo apt install tor curl openssl -y
 
 # استنساخ المستودع
 git clone https://github.com/YOUR_USERNAME/insta.git
@@ -27,15 +27,15 @@ git clone https://github.com/YOUR_USERNAME/insta.git
 # الدخول إلى المجلد
 cd insta
 
-# تثبيت مكتبات بايثون
-pip3 install -r requirements.txt
+# إعطاء صلاحية التنفيذ للسكربت
+chmod +x insta.sh
 
 ## 💻 طريقة الاستخدام
 1. تأكد من تشغيل خدمة TOR في الخلفية:
 sudo service tor start
 
-2. قم بتشغيل الأداة:
-python3 tool.py
+2. قم بتشغيل الأداة بصلاحيات الروت:
+sudo ./insta.sh
 
 3. اتبع التعليمات التي تظهر على الشاشة.
 
