@@ -22,7 +22,7 @@ sudo apt update
 sudo apt install tor curl openssl -y
 
 # استنساخ المستودع
-git clone https://github.com/YOUR_USERNAME/insta.git
+git clone https://github.com/xs244g-sketch/insta.git
 
 # الدخول إلى المجلد
 cd insta
